@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.3/dist/flowbite.min.css" /> -->
+</head>
+
+<body class="bg-black">
+
+    <div id="main">
+
+
+
+        <nav class="sticky bg-black px-8 py-6 text-white flex items-center justify-between">
+
+            <a class="mx-8 cursor-pointer">
+                <img src="https://www.ipx.club/assets/images/logo.png" alt="IPX Logo" class="h-12">
+            </a>
+
+            <div class="flex items-center justify-between text:sm md:text-base">
+                <a class="mx-4 md:mx-4 px-6 py-2"
+                    style="background: radial-gradient(86.07% 145.35% at 28.05% 86.07%,#3e67ff 0%,#e47298 100%);">Get
+                    Early
+                    Access</a>
+            </div>
+
+        </nav>
+
+        <footer class="text-white absolute inset-x-0 bottom-0">
+            <div class="w-full mt-24 mb-8 border-t pt-8 border-gray-600">
+                <div class="grid grid-rows-none grid-flow-col lg:w-9/12 mx-auto relative">
+                    <div class="w-full place-content-center items-center">
+                        <div class="grid grid-cols-none gap-4 mt-4"><img
+                                src="https://www.ipx.club/assets/images/logo.png" alt="IPX Logo"
+                                class="align-middle h-12">
+                            <div>© 2022</div>
+                        </div>
+                    </div>
+                    <div class="w-full">
+                        <div class="pb-4"><span class="border-b-2 pb-4 text-lg">How We Work</span></div>
+                        <div class="grid grid-cols-none gap-4 mt-4">
+                            <a href="#">About Us</a>
+                            <a href="#">Terms of Use</a>
+                            <a href="#">Privacy Policy</a>
+                        </div>
+                    </div>
+                    <div class="w-full">
+                        <div class="pb-4"><span class="border-b-2 pb-4 text-lg">Our Social Media</span></div>
+                        <div class="grid grid-cols-none gap-4 mt-4">
+                            <a href="#">Facebook</a>
+                            <a href="#">Instagram</a>
+                            <a href="#">Twitter</a>
+                        </div>
+                    </div>
+                    <div class="w-full">
+                        <div class="pb-4"><span class="border-b-2 pb-4 text-lg">Our Support</span></div>
+                        <div class="grid grid-cols-none gap-4 mt-4">
+                            <a href="#">FAQs</a>
+                            <a href="#">Knowledge Base</a>
+                            <a href="#">Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+    <div id="cookieDiv" class="z-20 py-4 fixed bottom-0 flex flex-col max-w-full bg-gray-600 visible bg-clip-padding shadow-sm outline-none 
+    transition duration-300 ease-in-out text-gray-200 left-0 right-0 border-none max-h-full show">
+        <div class="p-4 small grid grid-flow-row sm:grid-flow-col">
+            <div class="w-full">
+                By clicking “Allow All”, you agree to the storing of cookies on your device to enhance site navigation,
+                analyze site usage, and assist in our marketing efforts. Cookie Notice
+            </div>
+            <div class="w-full">
+                <a class="mx-4 md:mx-4 underline px-4 py-2 font-medium text-sm">Customize Settings</a>
+                <a class="mx-4 md:mx-4 px-4 py-2 font-medium text-sm cursor-pointer" onclick="hidecookie()"
+                    style="background: radial-gradient(86.07% 145.35% at 28.05% 86.07%,#3e67ff 0%,#e47298 100%);">Accept
+                    All</a>
+                <a class="mx-4 md:mx-4 px-4 py-2 font-medium text-sm bg-[#6A6A6A] cursor-pointer"
+                    onclick="hidecookie()">Disable All</a>
+            </div>
+        </div>
+    </div>
+
+    <button onclick="showcookie()"
+        class="z-10 fixed bottom-0 inline-block px-6 py-2.5 btn-primary text-white font-medium text-xs leading-tight uppercase hover:shadow-lg"
+        style="background: radial-gradient(86.07% 145.35% at 28.05% 86.07%,#3e67ff 0%,#e47298 100%);">
+        Show Cookie Policy
+    </button>
+
+    <script>
+        function showcookie() {
+            document.getElementById("cookieDiv").classList.add("slide-in-bottom");
+            document.getElementById("cookieDiv").classList.remove("slide-out-bottom");
+
+
+            document.getElementById("main").classList.add("opacity-50");
+            document.getElementById("main").classList.remove("opacity-100");
+        }
+        function hidecookie() {
+            document.getElementById("cookieDiv").classList.add("slide-out-bottom");
+            document.getElementById("cookieDiv").classList.remove("slide-in-bottom");
+
+            document.getElementById("main").classList.add("opacity-100");
+            document.getElementById("main").classList.remove("opacity-50");
+        }
+        showcookie();
+    </script>
+
+    <style>
+        .slide-out-bottom {
+            -webkit-animation: slide-out-bottom 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+            animation: slide-out-bottom 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+        }
+
+        @-webkit-keyframes slide-out-bottom {
+            0% {
+                -webkit-transform: translateY(0);
+                transform: translateY(0);
+                opacity: 1;
+            }
+
+            100% {
+                -webkit-transform: translateY(1000px);
+                transform: translateY(1000px);
+                opacity: 0;
+            }
+        }
+
+        @keyframes slide-out-bottom {
+            0% {
+                -webkit-transform: translateY(0);
+                transform: translateY(0);
+                opacity: 1;
+            }
+
+            100% {
+                -webkit-transform: translateY(1000px);
+                transform: translateY(1000px);
+                opacity: 0;
+            }
+        }
+
+        .slide-in-bottom {
+            -webkit-animation: slide-in-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+            animation: slide-in-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        }
+
+        @-webkit-keyframes slide-in-bottom {
+            0% {
+                -webkit-transform: translateY(1000px);
+                transform: translateY(1000px);
+                opacity: 0;
+            }
+
+            100% {
+                -webkit-transform: translateY(0);
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slide-in-bottom {
+            0% {
+                -webkit-transform: translateY(1000px);
+                transform: translateY(1000px);
+                opacity: 0;
+            }
+
+            100% {
+                -webkit-transform: translateY(0);
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+    </style>
+
+
+    <!-- <div class="text-center">
+        <button
+            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+            type="button" data-drawer-target="drawer-bottom-example" data-drawer-show="drawer-bottom-example"
+            data-drawer-placement="bottom" aria-controls="drawer-bottom-example">
+            Show bottom drawer
+        </button>
+    </div>
+
+    <div id="drawer-bottom-example"
+        class="fixed z-40 w-full p-4 overflow-y-auto bg-white dark:bg-gray-800 transition-transform bottom-0 left-0 right-0 translate-y-full"
+        tabindex="-1" aria-labelledby="drawer-bottom-label" aria-hidden="true">
+        <h5 id="drawer-bottom-label"
+            class="inline-flex items-center mb-4 text-base font-semibold text-gray-500 dark:text-gray-400"><svg
+                class="w-5 h-5 mr-2" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd"
+                    d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"
+                    clip-rule="evenodd"></path>
+            </svg>Bottom drawer</h5>
+        <button type="button" data-drawer-dismiss="drawer-bottom-example" aria-controls="drawer-bottom-example"
+            class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 absolute top-2.5 right-2.5 inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white">
+            <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd"
+                    d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                    clip-rule="evenodd"></path>
+            </svg>
+            <span class="sr-only">Close menu</span>
+        </button>
+        <p class="max-w-lg mb-6 text-sm text-gray-500 dark:text-gray-400">Supercharge your hiring by taking advantage of
+            our <a href="#" class="text-blue-600 underline dark:text-blue-500 hover:no-underline">limited-time sale</a>
+            for Flowbite Docs + Job Board. Unlimited access to over 190K top-ranked candidates and the #1 design job
+            board.</p>
+        <a href="#"
+            class="px-4 py-2 mr-2 text-sm font-medium text-center text-gray-900 bg-white border border-gray-200 rounded-lg focus:outline-none hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">Learn
+            more</a>
+        <a href="#"
+            class="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Get
+            access <svg class="w-4 h-4 ml-2" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd"
+                    d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                    clip-rule="evenodd"></path>
+            </svg></a>
+    </div>
+
+
+    <script src="https://unpkg.com/flowbite@1.5.3/dist/flowbite.js"></script> -->
+
+</body>
+
+</html>
