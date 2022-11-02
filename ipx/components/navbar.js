@@ -6,8 +6,8 @@ const Navbar = () => {
     return (
         <div>
 
-            <nav className="sticky bg-black px-8 py-6 text-white flex items-center justify-between">
-                <a className="mx-8 cursor-pointer">
+            <nav className="sticky bg-black md:px-8 py-6 text-white flex items-center justify-between">
+                <a className="md:mx-8 mx-5 cursor-pointer">
                     <Image
                         src={ipxLogo}
                         alt="IPX Logo"
@@ -16,7 +16,7 @@ const Navbar = () => {
                 </a>
                 <div className="flex items-center justify-between text:sm md:text-base">
                     <a
-                        className="mx-4 md:mx-4 px-6 py-2"
+                        className="mx-2 md:mx-4 md:px-6 px-2 py-2"
                         style={{
                             background:
                                 "radial-gradient(86.07% 145.35% at 28.05% 86.07%,#3e67ff 0%,#e47298 100%)"

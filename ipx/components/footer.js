@@ -6,22 +6,22 @@ const Footer = () => {
     return (
         <div>
 
-            <footer className="text-white absolute inset-x-0 bottom-0">
-                <div className="w-full mt-24 mb-8 border-t pt-8 border-gray-600">
-                    <div className="grid grid-rows-none grid-flow-col lg:w-9/12 mx-auto relative">
-                        <div className="w-full place-content-center items-center">
+            <footer className="text-white absolute inset-x-0 bottom-0 mb-10">
+                <div className="w-full mt-24 mb-8 border-t pt-8 pl-5 border-gray-600">
+                    <div className="grid grid-rows-2 gap-4 md:grid-rows-none grid-flow-col lg:w-9/12 mx-auto relative ">
+                        <div className="w-full place-content-center items-center ">
                             <div className="grid grid-cols-none gap-4 mt-4">
                                 <Image
                                     src={ipxLogo}
                                     alt="IPX Logo"
-                                    className="align-middle h-12 w-auto"
+                                    className="align-middle h-12 w-auto bg-black mx-auto mt-5"
                                 />
-                                <div>© 2022</div>
+                                <div className="mx-auto">© 2022</div>
                             </div>
                         </div>
                         <div className="w-full">
                             <div className="pb-4">
-                                <span className="border-b-2 pb-4 text-lg">How We Work</span>
+                                <span className="border-b-2 pb-4 md:text-lg">How We Work</span>
                             </div>
                             <div className="grid grid-cols-none gap-4 mt-4">
                                 <a href="#">About Us</a>
@@ -52,7 +52,6 @@ const Footer = () => {
                     </div>
                 </div>
             </footer>
-
 
         </div>
 

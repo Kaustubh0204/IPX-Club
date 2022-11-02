@@ -34,12 +34,13 @@ const Cookie = () => {
                         device to enhance site navigation, analyze site usage, and assist in our
                         marketing efforts. Cookie Notice
                     </div>
-                    <div className="w-full">
-                        <a className="mx-4 md:mx-4 underline px-4 py-2 font-medium text-sm">
+                    <br/> 
+                    <div className="w-full max-sm:flex">
+                        <a className="mx-4 md:mx-4 underline md:px-4 py-2 font-medium text-sm">
                             Customize Settings
                         </a>
                         <a
-                            className="mx-4 md:mx-4 px-4 py-2 font-medium text-sm cursor-pointer"
+                            className="mx-4 md:mx-4 px-4 py-2 font-medium text-sm cursor-pointer text-center"
                             onClick={hidecookie}
                             style={{
                                 background:
@@ -49,7 +50,7 @@ const Cookie = () => {
                             Accept All
                         </a>
                         <a
-                            className="mx-4 md:mx-4 px-4 py-2 font-medium text-sm bg-[#6A6A6A] cursor-pointer"
+                            className="mx-4 md:mx-4 px-4 py-2 font-medium text-sm bg-[#6A6A6A] cursor-pointer text-center"
                             onClick={hidecookie}
                         >
                             Disable All
@@ -57,9 +58,10 @@ const Cookie = () => {
                     </div>
                 </div>
             </div>
+
             <button
                 onClick={showcookie}
-                className="z-10 fixed bottom-0 inline-block px-6 py-2.5 btn-primary text-white font-medium text-xs leading-tight uppercase hover:shadow-lg"
+                className="z-10 fixed bottom-0  inline-block px-6 py-2.5 btn-primary text-white font-medium text-xs leading-tight uppercase hover:shadow-lg"
                 style={{
                     background:
                         "radial-gradient(86.07% 145.35% at 28.05% 86.07%,#3e67ff 0%,#e47298 100%)"
